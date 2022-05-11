@@ -13,7 +13,7 @@ class ArtistController(val loaders : Collection<LineUpLoader>) {
         return loaders.first { it.identifier == name }.loadArtists()
     }
 
-    @GetMapping("/loaders")
+    @GetMapping("/available")
     fun availableLoaders(): Collection<String> {
         return loaders.map { it.identifier }
     }
